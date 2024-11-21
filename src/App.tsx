@@ -1,15 +1,36 @@
+import { ThemeProvider } from "@/components/theme-provider"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { Home } from "@/pages/home"
+import { About } from "@/pages/about"
+import { Projects } from "@/pages/projects"
+import { Articles } from "@/pages/articles"
+import { Contact } from "@/pages/contact"
+
 function App() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-4 bg-slate-100">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold text-slate-800">
-          🚧 Website Under Construction
-        </h1>
-        <p className="text-slate-600">
-          We're working hard to bring you something amazing. Check back soon!
-        </p>
-      </div>
-    </main>
+    <Router>
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <div className="h-screen bg-background text-foreground flex flex-col">
+          <Navbar />
+          
+          <main className="flex-1 flex justify-center">
+            <div className="w-full max-w-[800px] px-4">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/articles" element={<Articles />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </div>
+          </main>
+
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </Router>
   )
 }
 

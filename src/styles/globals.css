@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    @apply font-sans;
+  }
+
+  html, body {
+    @apply m-0 p-0 antialiased bg-background;
+  }
+
+  h1 {
+    @apply font-heading text-[48px] leading-[50px] mb-5 text-foreground;
+  }
+
+  h2 {
+    @apply text-foreground mt-[60px] mb-0 text-2xl;
+  }
+
+  h3, h3 a {
+    @apply text-foreground text-lg mt-5 mb-0;
+  }
+
+  p {
+    @apply my-5 text-secondary;
+  }
+
+  strong {
+    @apply text-foreground font-medium;
+  }
+
+  blockquote {
+    @apply border-l-4 border-muted text-secondary italic m-0 pl-5;
+  }
+
+  a:not(nav a) {
+    @apply border-b border-secondary text-foreground no-underline transition-opacity duration-200;
+  }
+
+  a:not(nav a):hover, 
+  a:not(nav a):focus {
+    @apply opacity-80;
+  }
+
+  code {
+    @apply bg-[#151417] rounded-lg text-foreground font-code text-[15px];
+  }
+
+  :not(pre) > code {
+    @apply p-1;
+  }
+
+  img {
+    @apply rounded-lg min-w-full max-w-full;
+  }
+
+  @font-face {
+    font-family: 'Neuzeit Grotesk Bold';
+    src: url('/fonts/NeuzeitGrotesk-Bold.woff2') format('woff2'),
+         url('/fonts/NeuzeitGrotesk-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Fira Code';
+    src: url('/fonts/FiraCode-Regular.woff2') format('woff2'),
+         url('/fonts/FiraCode-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Biotif';
+    src: url('/fonts/Biotif-Bold.woff2') format('woff2'),
+         url('/fonts/Biotif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Biotif';
+    src: url('/fonts/Biotif-Book.woff2') format('woff2'),
+         url('/fonts/Biotif-Book.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Biotif';
+    src: url('/fonts/Biotif-Regular.woff2') format('woff2'),
+         url('/fonts/Biotif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Biotif';
+    src: url('/fonts/Biotif-RegularItalic.woff2') format('woff2'),
+         url('/fonts/Biotif-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+  }
+}
