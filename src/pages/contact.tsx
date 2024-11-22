@@ -1,9 +1,14 @@
+import { Button } from "@/components/ui/button"
+
 export function Contact() {
   return (
     <div className="text-center space-y-8">
-      <h2 className="text-4xl font-bold">Contact Us</h2>
       <p className="max-w-2xl mx-auto">
-        This is the contact page. Add your content here.
+        <Button asChild>
+          <a href="mailto:gregoire.geoffroy@gmail.com">
+            Contact Me
+          </a>
+        </Button>
       </p>
     </div>
   )
