@@ -63,19 +63,19 @@
   }
 
   h1 {
-    @apply font-heading text-[48px] leading-[50px] mb-5 text-foreground;
+    @apply font-heading text-[32px] leading-[38px] mb-4 text-foreground lg:text-[48px] lg:leading-[50px] lg:mb-5;
   }
 
   h2 {
-    @apply text-foreground mt-[60px] mb-0 text-2xl;
+    @apply text-foreground mt-[40px] mb-0 text-xl lg:mt-[60px] lg:text-2xl;
   }
 
   h3, h3 a {
-    @apply text-foreground text-lg mt-5 mb-0;
+    @apply text-foreground text-base mt-4 mb-0 lg:text-lg lg:mt-5;
   }
 
   p {
-    @apply my-5 text-secondary;
+    @apply my-4 text-secondary text-base lg:my-5;
   }
 
   strong {
@@ -96,7 +96,7 @@
   }
 
   code {
-    @apply bg-[#151417] rounded-lg text-foreground font-code text-[15px];
+    @apply bg-[#151417] rounded-lg text-foreground font-code text-[14px] lg:text-[15px];
   }
 
   :not(pre) > code {
@@ -104,7 +104,7 @@
   }
 
   img {
-    @apply rounded-lg min-w-full max-w-full;
+    @apply rounded-lg min-w-full max-w-full h-auto;
   }
 
   @font-face {

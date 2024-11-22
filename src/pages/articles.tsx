@@ -1,18 +1,6 @@
 import { motion } from "framer-motion"
 import { format } from "date-fns"
-
-// Sample articles data - you can move this to a separate file
-const articles = [
-  {
-    title: "Building a Modern Web Application",
-    description: "A comprehensive guide to building web applications with React and TypeScript",
-    date: "2024-03-15",
-    readingTime: "5 min read",
-    tags: ["React", "TypeScript", "Web Development"],
-    url: "/articles/building-modern-web-app"
-  },
-  // Add more articles...
-]
+import { articles } from "@/data/articles"
 
 export function Articles() {
   return (
@@ -73,26 +61,6 @@ export function Articles() {
             </a>
           </motion.article>
         ))}
-      </div>
-
-      {/* Newsletter Section */}
-      <div className="mt-16 p-6 border rounded-lg bg-muted/50">
-        <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Subscribe to my newsletter</h3>
-          <p className="text-muted-foreground">
-            Get emails from me about web development, tech, and early access to new articles.
-          </p>
-          <div className="flex gap-2">
-            <input
-              type="email"
-              placeholder="email@example.com"
-              className="flex-1 px-3 py-2 bg-background border rounded-md"
-            />
-            <button className="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   )

@@ -7,7 +7,7 @@ export function About() {
       <div className="flex flex-col md:flex-row md:justify-between md:gap-8">
         <div className="md:w-1/2">
           <img
-            src="/avatar.jpg" // Add your image
+            src="/images/avatar.webp"
             alt="Gregoire Geoffroy"
             className="rounded-lg w-full max-w-[336px] mx-auto md:mx-0"
           />

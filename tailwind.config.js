@@ -56,14 +56,16 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Biotif", ...fontFamily.sans],
-        heading: ["Neuzeit Grotesk Bold", ...fontFamily.sans],
-        code: ["Fira Code", fontFamily.mono],
+        body: ['Biotif', 'sans-serif'],
+        code: ['Fira Code', 'monospace'],
+        heading: ['Neuzeit Grotesk Bold', 'sans-serif'],
+      },
+      spacing: {
+        'nav-desktop': '60px',
+        'nav-mobile': '110px',
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        custom: '8px',
       },
       keyframes: {
         "accordion-down": {

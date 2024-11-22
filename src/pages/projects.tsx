@@ -6,13 +6,21 @@ const projects = [
     year: "2024",
     projects: [
       {
-        title: "Project One",
-        description: "A modern web application built with React and TypeScript",
-        url: "https://project-one.com",
-        image: "/projects/project-one.png",
-        tags: ["React", "TypeScript", "Tailwind"],
+        title: "Moodiz - Catering Service Website",
+        description: "A modern catering service website built for Moodiz, featuring responsive design, dynamic content management, and seamless user experience.",
+        url: "https://www.moodiz.fr",
+        image: "/projects/moodiz.png",
+        tags: ["Webflow", "Client First", "JavaScript", "Responsive Design"],
         featured: true
       },
+      {
+        title: "Pomodoro Timer",
+        description: "A modern Pomodoro Timer application built with React and Shadcn UI, featuring customizable settings and dark/light mode support.",
+        url: "https://pomodoro-shadcn.netlify.app",
+        image: "/projects/pomodoro.png",
+        tags: ["React", "TypeScript", "Tailwind", "Shadcn UI", "Vite"],
+        featured: true
+      }
       // Add more projects...
     ]
   },

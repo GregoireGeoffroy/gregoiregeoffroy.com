@@ -1,36 +1,29 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import { Home } from "@/pages/home"
-import { About } from "@/pages/about"
-import { Projects } from "@/pages/projects"
-import { Articles } from "@/pages/articles"
-import { Contact } from "@/pages/contact"
+import ErrorBoundary from '@/components/ui/error-boundary'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <Router>
+    <ErrorBoundary>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <div className="h-screen bg-background text-foreground flex flex-col">
+        <div 
+          className="flex flex-col min-h-[100vh] relative bg-background text-foreground"
+          style={{ "--space-navHeightMobile": "110px" } as React.CSSProperties}
+        >
           <Navbar />
           
-          <main className="flex-1 flex justify-center">
+          <main className="flex-1 flex justify-center items-center py-16 sm:py-[110px]">
             <div className="w-full max-w-[800px] px-4">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/articles" element={<Articles />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
+              <Outlet />
             </div>
           </main>
 
           <Footer />
         </div>
       </ThemeProvider>
-    </Router>
+    </ErrorBoundary>
   )
 }
 
